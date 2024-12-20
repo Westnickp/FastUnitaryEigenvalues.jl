@@ -3,7 +3,7 @@ using FastUnitaryEigenvalues, LinearAlgebra, Test
 function example(n)
     U = sample_factored_form(10)
     U2 = apply_ctchain(U, Matrix(I(10)).+0.0im)
-    v1 = qr_iterate(U)
+    v1 = uuh_qr(U)
     v2 = eigvals(U2)
     v1 = sort(v1, lt = (x,y) -> real(x)==real(y) ? imag(x)<imag(y) : real(x)<real(y))
 	v2 = sort(v2, lt = (x,y) -> real(x)==real(y) ? imag(x)<imag(y) : real(x)<real(y))
