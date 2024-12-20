@@ -2,5 +2,6 @@ using FastUnitaryEigenvalues
 using Test
 
 @testset "FastUnitaryEigenvalues.jl" begin
-    # Write your tests here.
+    @test FastUnitaryEigenvalues.greet_your_package_name() == "Hello FastUnitaryEigenvalues"
+    @test FastUnitaryEigenvalues.greet_your_package_name() != "Hello world!"
 end
